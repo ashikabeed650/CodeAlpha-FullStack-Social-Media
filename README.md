@@ -2,84 +2,257 @@
 
 ## Overview
 
-This is a full stack Social media application built using React, Vite for Frontend and Django, Django Rest Framework for the backend. The app allows users to create, update, delete posts, manage their profiles, follow others and features JWT authentication for secure access.
+A modern Full Stack Social Media Application built using **React + Vite** for the frontend and **Django + Django REST Framework** for the backend.
+
+The application enables users to connect, share posts, interact through comments and likes, manage profiles, and securely authenticate using JWT.
+
+---
 
 ## Features
 
-- **User Authentication**: Secure login and registration using JWT (JSON Web Token).
-- **Password Reset**: Password Reset via SMTP Service 
-- **Post Management**: Users can create and manage their **Posts**.
-- **Like / UnLike**: Users can **Like/Unlike** posts.
-- **Comment**: Users can Comment on posts.
-- **Profile Management**: Users can create and manage posts.
+### Authentication
+- User Registration
+- User Login
+- JWT Authentication
+- Secure Access Control
+- Password Reset via Email (SMTP)
 
-## Prerequisites
+### Post Management
+- Create Posts
+- Update Posts
+- Delete Posts
+- Upload Images
+- View Feed
 
-Before you begin, ensure you have met the following requirements:
-- Node.js and npm installed
-- Python and pip installed
-- Django installed
+### Social Interaction
+- Like Posts
+- Unlike Posts
+- Comment on Posts
+- Follow Users
 
-## Getting Started
+### Profile Management
+- Edit Profile
+- Upload Profile Picture
+- View User Profiles
 
-### Backend Setup
+---
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/ZainAli121/FullStack-Social-Media
-2. **Navigate to the project directory**
-   ```sh
-   cd Backend
-3. Create a virtual environment
-   ```sh
-   python -m venv venv
-4. Activate the virtual environment
-   ```sh
-    venv/Scripts/activate
-5. Install the required packages
-    ```sh
-    pip install -r requirements.txt
-6. Add your Database and Email Credentials in `Setting.py` File
-   
-7. Run Migrations
-    ```sh
-    python manage.py migrate
+## Tech Stack
 
-7. Addtional setup
-    - Create a superuser
-    ```sh
-    python manage.py createsuperuser
+### Frontend
+- React.js
+- Vite
+- Axios
+- Tailwind CSS
 
-8. Start the development server
-    ```sh
-    python manage.py runserver
+### Backend
+- Django
+- Django REST Framework
+- JWT Authentication
+- PostgreSQL / SQLite
 
-9. The backend server should now be running on `http://127.0.0.1:8000/`
+### Deployment
+- Vercel (Frontend)
+- Render / Railway / Local Server (Backend)
 
+---
 
-### Frontend Setup
+# Project Structure
 
-1. **Navigate to the project directory**
-   ```sh
-   cd Frontend
-2. Install the required packages
-   ```sh
-    npm install
-3. Create .env file in the root of the frontend directory and add the following environment variables
-    ```sh
-    VITE_API_URL = "http://127.0.0.1:8000"
-4. Start the development server
-    ```sh
-    npm run dev
-5. The frontend server should now be running on `http://localhost:5173/`
+```bash
+FullStack-Social-Media/
+│
+├── Backend/
+│   ├── social/
+│   └── api/
+│
+├── Frontend/
+│   ├── src/
+│   ├── public/
+│   └── components/
+│
+├── README.md
+└── .gitignore
+```
 
+---
 
-### Demo 
-1. Access the Full App at `https://blissbuzz.vercel.app`
+# Installation Guide
 
+## Backend Setup
 
-## Contributing
-Feel free to contribute to this project by creating a pull request.
+### Clone Repository
 
-## Team
-Developed by **Zain Ali** with ❤️
+```bash
+git clone https://github.com/ashikabeed650/CodeAlpha-FullStack-Social-Media.git
+```
+
+### Navigate to Backend
+
+```bash
+cd Backend/social
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Environment
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Linux/Mac
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+EMAIL_HOST_USER=your_email@gmail.com
+EMAIL_HOST_PASSWORD=your_password
+```
+
+### Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+### Create Admin User
+
+```bash
+python manage.py createsuperuser
+```
+
+### Run Backend Server
+
+```bash
+python manage.py runserver
+```
+
+Backend URL
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
+# Frontend Setup
+
+Navigate to frontend directory
+
+```bash
+cd Frontend
+```
+
+Install Packages
+
+```bash
+npm install
+```
+
+Create `.env`
+
+```env
+VITE_API_URL=http://127.0.0.1:8000
+```
+
+Start Frontend
+
+```bash
+npm run dev
+```
+
+Frontend URL
+
+```text
+http://localhost:5173/
+```
+
+---
+
+# Screenshots
+
+Add your project screenshots here.
+
+Example:
+
+- Login Page
+- Home Feed
+- Profile Page
+- Comment Section
+
+---
+
+# Future Improvements
+
+- Real-time Chat
+- Notifications
+- Stories Feature
+- Dark Mode
+- Reels Support
+- Search Functionality
+
+---
+
+# Deployment
+
+Frontend Deployment
+
+```bash
+npm run build
+```
+
+Deploy using:
+
+- Vercel
+- Netlify
+
+Backend Deployment
+
+- Render
+- Railway
+- AWS
+
+---
+
+# Contributors
+
+**AshikAbeed**
+
+GitHub
+
+https://github.com/ashikabeed650
+
+---
+
+# License
+
+This project was developed as part of the **CodeAlpha Internship Program**.
+
+---
+
+## Author
+
+### AshikAbeed
+
+Full Stack Developer
+
+Made with ❤️ using React and Django
